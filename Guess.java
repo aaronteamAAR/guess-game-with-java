@@ -10,12 +10,12 @@ public class Guess
 
 
 		Scanner userin = new Scanner(System.in);
-		System.out.println("Guess and win a prize")
+		System.out.println("Guess and win a prize");
 
 		do{
-			System.out.print("Enter a guess within 1 - 100\n")
+			System.out.print("Enter a guess within 1 - 100\n");
 			if(userin.hasNextInt()){
-				userGuess = userin.NextInt();
+				userGuess = userin.nextInt();
 				if(userGuess == guess)
 				{
 					System.out.println("correct");
@@ -23,8 +23,10 @@ public class Guess
 				}
 				else if(userGuess < guess)
 				System.out.println("Your guess is smaller");
+
 				else if(userGuess > guess)
-				System.out.println("Your guess is greater")
+				System.out.println("Your guess is greater");
+
 				if(atempt == 5)
 				{
 					System.out.println("You have exceeded the maxiumum attempt. Try again");
@@ -35,7 +37,7 @@ public class Guess
 				System.out.println("Enter a valid interger");
 				break;
 			}
-			while(userGuess != guess)
+			while(userGuess != guess);
 		}
 	}
 }
