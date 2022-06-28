@@ -14,7 +14,28 @@ public class Guess
 
 		do{
 			System.out.print("Enter a guess within 1 - 100\n")
-			if()
+			if(userin.hasNextInt()){
+				userGuess = userin.NextInt();
+				if(userGuess == guess)
+				{
+					System.out.println("correct");
+					break;
+				}
+				else if(userGuess < guess)
+				System.out.println("Your guess is smaller");
+				else if(userGuess > guess)
+				System.out.println("Your guess is greater")
+				if(atempt == 5)
+				{
+					System.out.println("You have exceeded the maxiumum attempt. Try again");
+					break;
+				}
+				attempt++;
+			}else{
+				System.out.println("Enter a valid interger");
+				break;
+			}
+			while(userGuess != guess)
 		}
 	}
 }
